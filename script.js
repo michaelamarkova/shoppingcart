@@ -104,7 +104,12 @@ function displayCart() {
     Object.values(cartItems).map((item) => {
       productContainer.innerHTML += `
       <div class="product">
-      <img src= "./images/${item.tag}.jpg">
+      <button class="delete-button" type="button" onclick="removeFromCart('${
+        item.name
+      }')">
+    DELETE
+  </button>
+      <img src= "${item.tag}.jpg">
       <span>${item.name}</span>
       </div>
       <div class="price">£${item.price},00</div>
@@ -124,10 +129,25 @@ function displayCart() {
     <h4 class="basketTotal">
     £${cartCost},00
     </h4>
-
-
     </div>`;
   }
 }
 onLoadCartNumbers();
 displayCart();
+
+/*-----------Hamb menu----------*/
+
+const mainMenu = document.querySelector(".mainMenu");
+const closeMenu = document.querySelector(".closeMenu");
+const openMenu = document.querySelector(".openMenu");
+
+openMenu.addEventListener("click", show);
+closeMenu.addEventListener("click", close);
+
+function show() {
+  mainMenu.style.display = "flex";
+  mainMenu.style.top = "0";
+}
+function close() {
+  mainMenu.style.top = "–100%";
+}

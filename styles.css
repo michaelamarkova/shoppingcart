@@ -1,68 +1,116 @@
+/*-----------Header----------*/
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
 }
-
-header {
-  background-color: wheat;
-  height: 150px;
-  position: relative;
+body {
+  font-family: "Arial", sans-serif;
 }
 nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 2;
+  background: #000;
+  color: #fff;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 50px, 60px, 0px, 60px;
+  justify-content: space-between;
 }
-
-nav li {
+nav .mainMenu {
+  display: flex;
   list-style: none;
+}
+nav .mainMenu li a {
   display: inline-block;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-nav li span {
-  padding-left: 5px;
-}
-
-li a {
-  padding-left: 5px;
-  background-color: white;
-  color: teal;
+  padding: 15px;
   text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.5rem;
 }
-
-.cart a {
-  background-color: teal;
-  color: white;
+nav .mainMenu li a:hover {
+  background: rgb(255, 94, 0);
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
   cursor: pointer;
-  text-decoration: none;
 }
+nav .mainMenu .closeMenu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.fa-facebook:hover {
+  color: rgb(0, 110, 255);
+}
+.fa-twitter:hover {
+  color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+  color: rgb(255, 0, 191);
+}
+.fa-github:hover {
+  color: rgb(255, 123, 0);
+}
+
+nav .logo {
+  margin: 6px;
+  font-size: 25px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: top 1s ease;
+    display: none;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .openMenu {
+    display: block;
+  }
+  nav .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 123, 0);
+    font-size: 1.6rem;
+  }
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
+}
+
+/*-----------Products----------*/
+
 .container,
 .products-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 50px;
   padding-bottom: 100px;
 }
+
 /*-----------Cart page----------*/
 
 .products-container {
   max-width: 650px;
   justify-content: space-around;
-  margin: 0, auto;
+  margin: 0 auto;
   margin-top: 50px;
-  margin-left: 50px;
 }
 
 .product-header {
@@ -94,6 +142,15 @@ li a {
   display: flex;
   align-items: center;
 }
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.products img {
+  width: 75px;
+  border-radius: 0.3cm;
+}
 .product {
   width: 45%;
   border-bottom: 1px solid teal;
@@ -111,6 +168,134 @@ li a {
 .basketTotalTitle {
   width: 30%;
 }
-.basetTotal {
+.basketTotal {
   width: 10%;
+}
+
+/*-----------Footer----------*/
+
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(255, 230, 120);
+  width: 100%;
+  height: auto;
+  padding: 30px, 30px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+.footer-content p {
+  max-width: 500p;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 3rem;
+}
+.socials li {
+  margin: 0 10px;
+}
+.socials a {
+  text-decoration: none;
+  color: black;
+  background-color: rgb(255, 230, 120);
+}
+.socials a i {
+  font-size: 2rem;
+  transition: all 0.2s ease 0s;
+}
+.socials a i:hover {
+  color: gray;
+}
+.footer-bottom {
+  background: #f8f8f8;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
+}
+
+/*-----------Hamb menu----------*/
+
+nav .mainMenu {
+  display: flex;
+  list-style: none;
+}
+nav .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+nav .mainMenu li a:hover {
+  background: rgb(255, 230, 120);
+}
+nav .mainMenu .closeMenu,
+i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+    transition: top 1s ease;
+    display: none;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .openMenu {
+    display: block;
+  }
+  nav .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 230, 120);
+    font-size: 1.6rem;
+  }
 }
