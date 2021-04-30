@@ -2,38 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Shopping Cart</title>
+    <script
+      src="https://kit.fontawesome.com/375bc9a913.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-
   <body>
     <header>
-      <nav>
-        <h2>Shop</h2>
-        <ul>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="aboutus.html">ABOUT US</a></li>
-          <li><a href="login.html">LOGIN</a></li>
-          <li class="cart">
-            <a href="cart.html"
-              >BASKET
-              <span>0</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <nav>
+      <div class="logo"><h1>Happy Honey</h1></div>
+      <div class="openMenu"><i class="fa fa-bars"></i></div>
+      <ul class="mainMenu">
+        <li><a href="index.html">SHOP</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">LOGIN</a></li>
+        <li class="cart"><a href="cart.html"><i class="fas fa-shopping-cart" id="basket-btn"></i><span>0</span></i></a></li>
+        <div class="closeMenu"><i class="fa fa-times-circle"></i></div>
+        <span class="icons">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-instagram-square"></i>
+          <i class="fab fa-youtube-square"></i>
+        </span>
+      </ul>
+    </nav>
     </header>
+
     <div class="products-container">
       <div class="product-header">
         <h5 class="product-title">PRODUCT</h5>
@@ -44,6 +45,30 @@
       <div class="products"></div>
     </div>
 
+    <footer>
+      <div class="footer-content">
+        <h3 class="footer-logo">Happy Honey</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet odit nulla incidunt? Cumque obcaecati ducimus cupiditate veritatis sapiente est.</p>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-youtube-square"></i></a>
+          </li>
+      
+        </ul>
+        <div class="footer-bottom">
+          <p>copyright &copy;2020 HappyHoney. designed by <span>Michaela</span></p>
+
+        </div>
+    
+      </div>
+    </footer>
+    
     <script src="script.js"></script>
   </body>
 </html>
