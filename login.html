@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home page</title>
+    <title>Login page</title>
     <link rel="stylesheet" href="./styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
     <link
@@ -35,33 +35,32 @@
     </nav>
     </header>
 
-    <div class="container">
-      <div class="image">
-        <img src="monstera.jpg" alt="plant1" />
-        <h3>Monstera</h3>
-        <h3>£25</h3>
-        <a class="add-to-cart cart1" href="#">Add to cart</a>
-      </div>
+    <div class="login-wrapper">
+      <form action="" class="form">
+        <img src="user.png" alt="user_avatar">
+        <h2>Login</h2>
+        <div class="input-group">
+          <input type="text" name="loginUser" id="loginUser" required>
+          <label for="loginUser">User name</label>
+        </div>
+        <div class="input-group">
+          <input type="password" name="loginUser" id="loginUser" required>
+          <label for="loginPaswors">Password</label>
+        </div>
+        <input type="submit" value="Login"class="submit-btn">
+        <a href="#forgot-pw" class="forgot-pw">Forgot password?</a>
+      </form>
 
-      <div class="image">
-        <img src="ivy.jpg" alt="plant2" />
-        <h3>Devil's Ivy</h3>
-        <h3>£15</h3>
-        <a class="add-to-cart cart2" href="#">Add to cart</a>
-      </div>
-
-      <div class="image">
-        <img src="fig.jpg" alt="plant3" />
-        <h3>Fiddle-leaf fig</h3>
-        <h3>£30</h3>
-        <a class="add-to-cart cart3" href="#">Add to cart</a>
-      </div>
-
-      <div class="image">
-        <img src="fern.jpg" alt="plant4" />
-        <h3>Boston fern</h3>
-        <h3>£15</h3>
-        <a class="add-to-cart cart4" href="#">Add to cart</a>
+      <div id="forgot-pw">
+        <form action="" class="form">
+          <a href="#" class="close">&times;</a>
+          <h2>Reset password</h2>
+          <div class="input-group">
+            <input type="email" name="email" id="email" required>
+            <label for="email">Email</label>
+          </div>
+          <input type="submit" value="Submit"class="submit-btn">
+        </form>
       </div>
     </div>
 

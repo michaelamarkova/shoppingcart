@@ -14,6 +14,19 @@ function show() {
 function close() {
   mainMenu.style.top = "-100%";
 }
+/*-----------API----------*/
+
+function initMap() {
+  var location = { lat: 49.472359, lng: 15.00308 };
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 8,
+    center: location,
+  });
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map,
+  });
+}
 
 /*-----------Shop----------*/
 
