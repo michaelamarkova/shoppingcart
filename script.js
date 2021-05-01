@@ -34,27 +34,27 @@ let carts = document.querySelectorAll(".add-to-cart");
 
 let products = [
   {
-    name: "Monstera",
-    tag: "monstera",
+    name: "Honey nr.1",
+    tag: "Honey nr.1",
     price: 25,
     inCart: 0,
   },
   {
-    name: "Ivy",
-    tag: "ivy",
+    name: "Honey nr.2",
+    tag: "Honey nr.2",
+    price: 20,
+    inCart: 0,
+  },
+  {
+    name: "Honey nr.3",
+    tag: "Honey nr.3",
     price: 15,
     inCart: 0,
   },
   {
-    name: "Fig",
-    tag: "fig",
-    price: 30,
-    inCart: 0,
-  },
-  {
-    name: "Fern",
-    tag: "fern",
-    price: 15,
+    name: "Honey nr.4",
+    tag: "Honey nr.4",
+    price: 10,
     inCart: 0,
   },
 ];
