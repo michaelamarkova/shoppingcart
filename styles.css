@@ -177,7 +177,7 @@ nav .logo {
   transform: scale(1.05);
   box-shadow: 0 0 40px -10px #dcdcdc;
 }
-.card .add-to-cart cart1 {
+.card .add-to-cart {
   display: block;
   color: #f8f8f8;
   text-align: center;
@@ -193,7 +193,7 @@ nav .logo {
   padding: 10px 5px;
   transition: ease-in 0.2s;
 }
-.card .btn:hover {
+.card .add-to-cart:hover {
   color: black;
   text-decoration: underline;
 }
